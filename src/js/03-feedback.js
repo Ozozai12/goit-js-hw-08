@@ -26,7 +26,7 @@ submitBtn.addEventListener('click', onSubmitClick);
 
 function onSubmitClick(evt) {
   evt.preventDefault();
-  if (emailInput.value === '' || messageInput.value === '') {
+  if (!emailInput.value || !messageInput.value) {
     return;
   }
   console.log(formData);
