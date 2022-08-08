@@ -19,6 +19,10 @@ function formFill() {
   if (formJs) {
     emailInput.value = formJs.email;
     messageInput.value = formJs.message;
+  } else if (!formJs.email) {
+    emailInput.value = '';
+  } else if (!formJs.message) {
+    messageInput.value = '';
   }
 }
 
