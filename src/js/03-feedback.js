@@ -27,12 +27,11 @@ function formFill() {
 
 
 
-function clearStorage() {
+function clearStorage(evt) {
   localStorage.removeItem('feedback-form-state');
   emailInput.value = '';
   messageInput.value = '';
-  formData.email = '';
-  formData.message = ''
+  evt.currentTarget.reset();
 }
 
 function onFormSubmit(evt) {
@@ -41,7 +40,7 @@ function onFormSubmit(evt) {
     return;
   }
   console.log(formData);
-  clearStorage();
+  clearStorage(evt);
 }
 
 
