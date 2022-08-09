@@ -29,8 +29,6 @@ function formFill() {
 
 function clearStorage(evt) {
   localStorage.removeItem('feedback-form-state');
-  emailInput.value = '';
-  messageInput.value = '';
   evt.currentTarget.reset();
 }
 
